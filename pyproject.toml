@@ -21,7 +21,7 @@ classifiers = [
 [tool.poetry.dependencies]
 python = ">= 3.9, <3.11"
 pyroll-basic = "^1.0.0"
-cad-to-shapely = "^0.3"
+cad-to-shapely = "^0.3.0"
 
 
 [tool.poetry.dev-dependencies]
