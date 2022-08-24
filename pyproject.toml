@@ -20,8 +20,8 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = ">= 3.9, <3.11"
-pyroll_basic = "^1.0.0"
-cad_to_shapely = "^0.3"
+pyroll-basic = "^1.0.0"
+cad-to-shapely = "^0.3"
 
 
 [tool.poetry.dev-dependencies]
