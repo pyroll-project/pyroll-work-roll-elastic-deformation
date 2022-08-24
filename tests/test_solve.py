@@ -10,7 +10,7 @@ def test_solve(tmp_path: Path, caplog):
     caplog.set_level(logging.DEBUG, logger="pyroll")
 
     import pyroll.basic
-    import pyroll.work_roll_bending
+    import pyroll.work_roll_elastic_deformation
 
     solve(sequence, in_profile)
 

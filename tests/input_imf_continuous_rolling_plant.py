@@ -1,6 +1,6 @@
 from pyroll.core import CircularOvalGroove, RoundGroove, Roll, Profile, RollPass, Transport, SwedishOvalGroove
 from pyroll.freiberg_flow_stress import FreibergFlowStressCoefficients
-from pyroll.work_roll_bending.roll_body import RollBody
+from pyroll.work_roll_elastic_deformation.roll_body import RollBody
 
 # initial profile
 in_profile = Profile.round(
@@ -284,7 +284,7 @@ sequence = [
         duration=0.5
     ),
     RollPass(
-        label="F2 - K9/24",
+        label="F2 - K 9/24",
         roll=Roll(
             groove=RoundGroove(
                 r1=0.5e-3,
