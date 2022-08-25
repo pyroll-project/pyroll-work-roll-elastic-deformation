@@ -1,3 +1,6 @@
+from .roll_body import RollBody
+from .disk_element import DiskElement
+
 from pyroll.core import RollPass, Roll
 from pyroll.ui import Reporter
 
