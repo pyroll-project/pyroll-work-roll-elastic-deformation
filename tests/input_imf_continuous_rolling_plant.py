@@ -47,7 +47,7 @@ sequence = [
                 distance_to_groove=53e-3
             )
         ),
-        velocity=4.5,
+        velocity=1,
         gap=13.5e-3,
     ),
     Transport(
@@ -70,7 +70,7 @@ sequence = [
                 distance_to_groove=129e-3
             ),
         ),
-        velocity=4.75,
+        velocity=1,
         gap=1.5e-3,
     ),
     Transport(
@@ -95,7 +95,7 @@ sequence = [
                 distance_to_groove=53e-3
             ),
         ),
-        velocity=9.1,
+        velocity=2,
         gap=1.5e-3,
     ),
     Transport(
@@ -118,7 +118,7 @@ sequence = [
                 distance_to_groove=200e-3
             ),
         ),
-        velocity=9.3,
+        velocity=2,
         gap=1e-3,
     ),
     Transport(
@@ -141,8 +141,8 @@ sequence = [
                 distance_to_groove=262e-3
             ),
         ),
-        velocity=9.1,
-        gap=6e-3,
+        velocity=2,
+        gap=5.4e-3,
     ),
     Transport(
         duration=4.4
@@ -164,8 +164,8 @@ sequence = [
                 distance_to_groove=318e-3
             ),
         ),
-        velocity=9.3,
-        gap=2e-3,
+        velocity=2,
+        gap=1.8e-3,
     ),
     Transport(
         duration=3.8
@@ -187,8 +187,8 @@ sequence = [
                 distance_to_groove=262e-3
             ),
         ),
-        velocity=9.1,
-        gap=1e-3,
+        velocity=2,
+        gap=0.8e-3,
     ),
     Transport(
         duration=7.2
@@ -210,8 +210,8 @@ sequence = [
                 distance_to_groove=377e-3
             ),
         ),
-        velocity=9.3,
-        gap=4.2e-3,
+        velocity=2,
+        gap=3.8e-3,
     ),
     Transport(
         duration=6.2
@@ -233,8 +233,8 @@ sequence = [
                 distance_to_groove=431e-3
             ),
         ),
-        velocity=9.1,
-        gap=4.2e-3,
+        velocity=2,
+        gap=3.5e-3,
     ),
     Transport(
         duration=4.5
@@ -255,8 +255,8 @@ sequence = [
                 distance_to_groove=485e-3
             ),
         ),
-        velocity=9.3,
-        gap=4.6e-3,
+        velocity=2,
+        gap=4e-3,
     ), Transport(
         duration=9
     ),
@@ -277,11 +277,11 @@ sequence = [
                 distance_to_groove=22e-3
             ),
         ),
-        velocity=2.25,
-        gap=2e-3,
+        velocity=4.89,
+        gap=2.3e-3,
     ),
     Transport(
-        duration=0.5
+        duration=1.5 / 4.89
     ),
     RollPass(
         label="F2 - K 9/24",
@@ -300,10 +300,10 @@ sequence = [
                 distance_to_groove=22e-3
             ),
         ),
-        velocity=2.8,
-        gap=1.4e-3,
+        velocity=6.1,
+        gap=1.5e-3,
     ), Transport(
-        duration=0.5
+        duration=1.5 / 6.1
     ),
     RollPass(
         label="F3 - K3/51",
@@ -322,18 +322,18 @@ sequence = [
                 distance_to_groove=22e-3
             ),
         ),
-        velocity=3.75,
-        gap=2.1e-3,
+        velocity=7.91,
+        gap=1.9e-3,
     ), Transport(
-        duration=0.25
+        duration=1.5 / 7.91
     ),
     RollPass(
         label="F4 - K9/23",
         roll=Roll(
             groove=RoundGroove(
                 r1=0.5e-3,
-                r2=4.08e-3,
-                depth=3.25e-3
+                r2=4.0e-3,
+                depth=3.7e-3
             ),
             nominal_radius=85e-3,
             youngs_modulus=210e9,
@@ -344,7 +344,7 @@ sequence = [
                 distance_to_groove=18e-3
             ),
         ),
-        velocity=4.4,
-        gap=1.4e-3,
+        velocity=10,
+        gap=1.5e-3,
     ),
 ]
