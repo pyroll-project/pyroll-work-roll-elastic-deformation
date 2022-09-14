@@ -8,9 +8,22 @@ from shapely.geometry import Point
 
 @dataclass
 class MatrixMethod:
+    """Represents the matrix method used for calculation of the solution, acts as an action class"""
 
     @staticmethod
     def transition_matrix(disk_width: float, youngs_modulus: float, load: float, area_moment_of_inertia: float):
+        """Transition matrix for prismatic rods
+
+        :param disk_width: width of all disk elements
+        :type disk_width: float
+        :param youngs_modulus: youngs modulus of the rolls material
+        :type youngs_modulus: float
+        :param load: load acting at the surface of a specific disk
+        :type load: float
+        :param area_moment_of_inertia: area moment of inertia of a specific disk element
+        :type area_moment_of_inertia: float
+
+        """
         return np.array([[1, disk_width, disk_width ** 2 / (2 * youngs_modulus * area_moment_of_inertia),
                           disk_width ** 3 / (6 * youngs_modulus * area_moment_of_inertia),
                           load * disk_width ** 4 / (24 * youngs_modulus * area_moment_of_inertia)],
@@ -23,7 +36,7 @@ class MatrixMethod:
 
     @staticmethod
     def initial_solution(roll_pass: RollPass, roll: Roll):
-
+        """Initial solution used for numerical solution."""
         force_application_point = Point(roll.body.distance_to_groove, roll.body.mean_diameter / 2)
         bearing_force_point_a = Point(roll.body.left_joint_center.x, roll.body.mean_diameter / 2)
         mean_area_moment_of_inertia = np.pi / 4 * (roll.body.mean_diameter / 2) ** 4
@@ -37,6 +50,7 @@ class MatrixMethod:
         return np.array([initial_bending_angle, -initial_shear_force])
 
     def state_variables(self, left_bearing_vector: np.ndarray, roll: Roll):
+        """Applies the transition matrix to the initial values."""
         vectors = [left_bearing_vector]
         for disk_element in roll.disk_elements:
             current_vector = np.dot(self.transition_matrix(roll.body.disk_width,

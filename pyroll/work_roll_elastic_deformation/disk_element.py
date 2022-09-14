@@ -6,6 +6,7 @@ from shapely.geometry import Polygon, Point
 
 @dataclass
 class DiskElement:
+    """Class representing a disk element with is used for discretization of the roll body."""
     body: Polygon
     surface_load: float = None
 

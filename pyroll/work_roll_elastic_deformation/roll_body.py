@@ -90,7 +90,7 @@ class RollBody:
         return clip_by_rect(self.body_with_half_joints, left_disk_boundary, -math.inf, right_disk_boundary, math.inf)
 
     def calculate_disk_load(self, disk: DiskElement, roll_pass: RollPass):
-
+        """Calculates the load on the surface of a disk element."""
         if "lendl_width" not in roll_pass.__dict__:
             load_distribution_width = roll_pass.out_profile.width
 
