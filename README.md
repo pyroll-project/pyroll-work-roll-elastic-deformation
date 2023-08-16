@@ -1,4 +1,4 @@
-# PyRoll Work Roll Elastic Deformation
+# PyRolL Work Roll Elastic Deformation
 
 Plugin for PyRolL providing the calculation of elastic work roll deformation by matrix method.
 
